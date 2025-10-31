@@ -115,6 +115,10 @@ fun FormDataDiri(modifier: Modifier
                     }
                 }
             }
+            Text(
+                text = "Pekerjaan",
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(bottom = 5.dp, start = 4.dp)
         }
             Row {
 
