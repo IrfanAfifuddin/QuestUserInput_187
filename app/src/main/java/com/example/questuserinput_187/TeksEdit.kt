@@ -153,6 +153,20 @@ fun FormDataDiri(modifier: Modifier
                 label = { Text("Alamat Lengkap") },
                 onValueChange = { textAlamat = it }
             )
+            Button(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(top = 10.dp, bottom = 5.dp),
+                enabled = textNama.isNotEmpty() && textAlamat.isNotEmpty(),
+                onClick = {
+                    nama = textNama
+                    alamat = textAlamat
+                    jenis = textJK
+                    pekerjaan = textPekerjaan
+                }
+            ) {
+                Text("Submit")
+            }
 
         }
             Row {
