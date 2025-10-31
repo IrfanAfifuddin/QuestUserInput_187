@@ -34,19 +34,19 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun FormDataDiri(modifier: Modifier
-){
+fun FormDataDiri(modifier: Modifier = Modifier) {
     var textNama by remember { mutableStateOf("") }
     var textAlamat by remember { mutableStateOf("") }
     var textJK by remember { mutableStateOf("") }
     var textPekerjaan by remember { mutableStateOf("") }
 
+    // hasil akhir yang akan ditampilkan di Card
     var nama by remember { mutableStateOf("") }
     var alamat by remember { mutableStateOf("") }
     var jenis by remember { mutableStateOf("") }
     var pekerjaan by remember { mutableStateOf("") }
 
-    val gender:List<String> = listOf("Laki-Laki","Peremopuan")
+    val gender = listOf("Laki-laki", "Perempuan")
     val pekerjaanList = listOf("Mahasiswa", "Kerja", "Punk")
 
     Box(
@@ -58,16 +58,17 @@ fun FormDataDiri(modifier: Modifier
             modifier = Modifier
                 .fillMaxWidth()
                 .height(100.dp)
-                .background(Color.Blue),
+                .background(MaterialTheme.colorScheme.primary),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
-            ) {
+        ) {
             Text(
-                text = "Formulir Pendaftaran"
+                text = "Formulir Pendaftaran",
                 color = Color.White,
                 style = MaterialTheme.typography.titleLarge
             )
         }
+
         Column(
             modifier = Modifier
                 .fillMaxWidth()
@@ -77,11 +78,13 @@ fun FormDataDiri(modifier: Modifier
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.Start
         ) {
+
             Text(
                 text = "Nama",
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 5.dp, start = 4.dp)
             )
+
             OutlinedTextField(
                 value = textNama,
                 singleLine = true,
@@ -91,11 +94,13 @@ fun FormDataDiri(modifier: Modifier
                 label = { Text("Nama Lengkap") },
                 onValueChange = { textNama = it }
             )
+
             Text(
                 text = "Jenis Kelamin",
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 5.dp, start = 4.dp)
             )
+
             Column(modifier = Modifier.padding(bottom = 15.dp)) {
                 gender.forEach { item ->
                     Row(
@@ -115,11 +120,13 @@ fun FormDataDiri(modifier: Modifier
                     }
                 }
             }
+
             Text(
-                text = "Pekerjaan",
+                text = "Status Pekerjaan",
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 5.dp, start = 4.dp)
             )
+
             Column(modifier = Modifier.padding(bottom = 15.dp)) {
                 pekerjaanList.forEach { item ->
                     Row(
@@ -139,11 +146,13 @@ fun FormDataDiri(modifier: Modifier
                     }
                 }
             }
+
             Text(
                 text = "Alamat",
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 5.dp, start = 4.dp)
             )
+
             OutlinedTextField(
                 value = textAlamat,
                 singleLine = true,
@@ -153,6 +162,7 @@ fun FormDataDiri(modifier: Modifier
                 label = { Text("Alamat Lengkap") },
                 onValueChange = { textAlamat = it }
             )
+
             Button(
                 modifier = Modifier
                     .fillMaxWidth()
@@ -171,7 +181,7 @@ fun FormDataDiri(modifier: Modifier
             if (nama.isNotEmpty()) {
                 Card(
                     elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
-                    colors = CardDefaults.cardColors(containerColor = Color.White),
+                    colors = CardDefaults.cardColors(containerColor = Color.Black),
                     modifier = Modifier
                         .fillMaxWidth()
                         .padding(top = 16.dp)
@@ -186,7 +196,6 @@ fun FormDataDiri(modifier: Modifier
                     }
                 }
             }
-
         }
     }
 }
