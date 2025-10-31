@@ -3,6 +3,7 @@ package com.example.questuserinput_187
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -48,7 +49,8 @@ fun FormDataDiri(modifier: Modifier) {
             value = textNama,
             singleLine = true,
             shape = MaterialTheme.shapes.large,
-            modifier = Modifier.width(250.dp),
+            modifier = Modifier
+                .fillMaxSize()
 
             label = { Text(text = "Nama Lengkap") },
 
@@ -85,7 +87,7 @@ fun FormDataDiri(modifier: Modifier) {
 
     Divider(
         modifier = Modifier.padding(bottom = dimensionResource(R.dimen.padding_medium), top = dimensionResource(
-             R.dimen.padding_medium)),
+            R.dimen.padding_medium)),
         thickness = dimensionResource(R.dimen.padding_tipis),
         color = Color.DarkGray
     )
@@ -108,7 +110,6 @@ fun FormDataDiri(modifier: Modifier) {
         thickness = dimensionResource(R.dimen.padding_tipis),
         color = Color.DarkGray
     )
-
     ElevatedCard(
         elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
         colors = CardDefaults.cardColors(containerColor = Color.Black),
@@ -116,10 +117,10 @@ fun FormDataDiri(modifier: Modifier) {
             .height(100.dp)
             .width(300.dp)
     ) {
-        Column( modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp),){
-            Text(text = "Nama :"+ nama, color = Color.White)
-            Text(text = "Gender :"+ jenis, color = Color.White)
-            Text(text = "Alamat :"+ alamat, color = Color.White)
+        Column( modifier = Modifier.padding(horizontal = 5.dp, vertical = 15.dp),) {
+            Text(text = "Nama :" + nama, color = Color.White)
+            Text(text = "Gender :" + jenis, color = Color.White)
+            Text(text = "Alamat :" + alamat, color = Color.White)
         }
     }
 }
