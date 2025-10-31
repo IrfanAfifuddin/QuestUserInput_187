@@ -75,7 +75,9 @@ fun FormDataDiri(modifier: Modifier
             horizontalAlignment = Alignment.Start
         ) {
             Text(
-
+                text = "Nama",
+                style = MaterialTheme.typography.bodyMedium,
+                modifier = Modifier.padding(bottom = 5.dp, start = 4.dp)
             )
         }
             Row {
