@@ -58,7 +58,13 @@ fun FormDataDiri(modifier: Modifier
                 .background(Color.Blue),
             verticalArrangement = Arrangement.Center,
             horizontalAlignment = Alignment.CenterHorizontally
+            ) {
+            Text(
+                text = "Formulir Pendaftaran"
+                color = Color.White,
+                style = MaterialTheme.typography.titleLarge
             )
+        }
             Row {
 
                 gender.forEach { item ->
