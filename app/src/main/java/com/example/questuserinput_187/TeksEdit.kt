@@ -55,6 +55,7 @@ fun FormDataDiri(modifier: Modifier
             modifier = Modifier
                 .fillMaxWidth()
                 .height(100.dp)
+                .background(Color.Blue),
             )
             Row {
 
