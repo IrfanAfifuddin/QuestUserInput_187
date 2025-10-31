@@ -56,6 +56,8 @@ fun FormDataDiri(modifier: Modifier
                 .fillMaxWidth()
                 .height(100.dp)
                 .background(Color.Blue),
+            verticalArrangement = Arrangement.Center,
+            horizontalAlignment = Alignment.CenterHorizontally
             )
             Row {
 
