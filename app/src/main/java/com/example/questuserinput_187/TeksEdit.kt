@@ -47,7 +47,9 @@ fun FormDataDiri(modifier: Modifier
     val gender:List<String> = listOf("Laki-Laki","Peremopuan")
 
     Box(
-
+        modifier = Modifier
+            .fillMaxSize()
+            .background(Color.LightGray)
     )
     Column(modifier = Modifier.padding(top = 50.dp),
         verticalArrangement = Arrangement.Top,
