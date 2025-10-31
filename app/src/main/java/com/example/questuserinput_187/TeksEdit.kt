@@ -73,7 +73,11 @@ fun FormDataDiri(modifier: Modifier
                 .padding(10.dp),
             verticalArrangement = Arrangement.Top,
             horizontalAlignment = Alignment.Start
-        )
+        ) {
+            Text(
+
+            )
+        }
             Row {
 
                 gender.forEach { item ->
