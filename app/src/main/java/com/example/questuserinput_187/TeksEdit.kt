@@ -65,6 +65,9 @@ fun FormDataDiri(modifier: Modifier
                 style = MaterialTheme.typography.titleLarge
             )
         }
+        Column(
+
+        )
             Row {
 
                 gender.forEach { item ->
