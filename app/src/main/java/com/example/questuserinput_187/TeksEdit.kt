@@ -93,6 +93,25 @@ fun FormDataDiri(modifier: Modifier
                 style = MaterialTheme.typography.bodyMedium,
                 modifier = Modifier.padding(bottom = 5.dp, start = 4.dp)
             )
+            Column(modifier = Modifier.padding(bottom = 15.dp)) {
+                gender.forEach { item ->
+                    Row(
+                        modifier = Modifier
+                            .selectable(
+                                selected = textJK == item,
+                                onClick = { textJK = item }
+                            )
+                            .padding(vertical = 2.dp),
+                        verticalAlignment = Alignment.CenterVertically
+                    ) {
+                        RadioButton(
+                            selected = textJK == item,
+                            onClick = { textJK = item }
+                        )
+                        Text(item)
+                    }
+                }
+            }
         }
             Row {
 
