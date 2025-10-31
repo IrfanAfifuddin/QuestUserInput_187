@@ -54,6 +54,7 @@ fun FormDataDiri(modifier: Modifier
         Column(
             modifier = Modifier
                 .fillMaxWidth()
+                .height(100.dp)
             )
             Row {
 
